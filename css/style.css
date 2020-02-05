@@ -1,0 +1,54 @@
+div{
+    display: grid;
+    grid-template-areas: 
+    "na he"
+    "se se"
+    "ma ma"
+    "ft ft";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.5fr 2fr 3fr 1fr;
+    height: 100vh;
+    width: 100wh;
+    grid-gap: 5px;
+}
+
+header{
+    grid-area: he;
+    background: grey;
+}
+
+nav{
+    grid-area: na;
+    background: grey;
+}
+
+section{
+    grid-area: se;
+    background: grey;
+    
+    display: grid;
+    grid-template-areas: 
+    "ar1 ar2";
+    
+
+}
+
+main{
+    grid-area: ma;
+    background: grey;
+}
+
+footer{
+    grid-area: ft;
+    background: grey;
+}
+
+.article1{
+    grid-area: ar1;
+    background: red;
+}
+
+.article2{
+    grid-area: ar2;
+    background: red;
+}
