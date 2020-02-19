@@ -1,4 +1,5 @@
-div{
+@media screen and (max-width: 768px){
+    .wrapper{
     display: grid;
     grid-template-areas: 
     "na he"
@@ -6,7 +7,7 @@ div{
     "ma ma"
     "ft ft";
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 0.5fr 2fr 3fr 1fr;
+    grid-template-rows: 0.5fr 2fr 4fr 1fr;
     height: 100vh;
     width: 100wh;
     grid-gap: 5px;
@@ -15,40 +16,110 @@ div{
 header{
     grid-area: he;
     background: grey;
+    border-radius: 10px;
 }
 
 nav{
     grid-area: na;
     background: grey;
+    border-radius: 10px;
 }
 
 section{
     grid-area: se;
-    background: grey;
     
     display: grid;
     grid-template-areas: 
     "ar1 ar2";
-    
-
+    grid-gap: 5px;
 }
 
 main{
     grid-area: ma;
     background: grey;
+    border-radius: 10px;
 }
 
 footer{
     grid-area: ft;
     background: grey;
+    border-radius: 10px;
 }
 
 .article1{
     grid-area: ar1;
     background: red;
+    border-radius: 10px;
+
 }
 
 .article2{
     grid-area: ar2;
     background: red;
+    border-radius: 10px;
+}
+
+}
+
+@media screen and (min-width: 769px){
+    .wrapper{
+        display: grid;
+        grid-template-areas: 
+        "na he he"
+        "ma ma se"
+        "ma ma se"
+        "ft ft ft";
+        grid-template-columns: 1fr 4fr 4fr;
+        grid-template-rows: 0.5fr 2fr 4fr 1fr;
+        height: 100vh;
+        width: 100wh;
+        grid-gap: 5px;
+    }
+    
+    header{
+        grid-area: he;
+        background: grey;
+        border-radius: 10px;
+    }
+    
+    nav{
+        grid-area: na;
+        background: grey;
+        border-radius: 10px;
+    }
+    
+    section{
+        grid-area: se;
+        
+        display: grid;
+        grid-template-areas: 
+        "ar1 ar2";
+        grid-gap: 5px;
+    }
+    
+    main{
+        grid-area: ma;
+        background: grey;
+        border-radius: 10px;
+    }
+    
+    footer{
+        grid-area: ft;
+        background: grey;
+        border-radius: 10px;
+    }
+    
+    .article1{
+        grid-area: ar1;
+        background: red;
+        border-radius: 10px;
+    
+    }
+    
+    .article2{
+        grid-area: ar2;
+        background: red;
+        border-radius: 10px;
+    }
+    
 }
