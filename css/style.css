@@ -1,71 +1,129 @@
+/*Index/Homepage*/
 @media screen and (max-width: 768px){
-    .wrapper{
-    display: grid;
-    grid-template-areas: 
-    "na he"
-    "se se"
-    "ma ma"
-    "ft ft";
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 0.5fr 2fr 4fr 1fr;
-    height: 100vh;
-    width: 100wh;
-    grid-gap: 5px;
+        .wrapper{
+        display: grid;
+        grid-template-areas: 
+        "he he"
+        "se se"
+        "ma ma"
+        "ft ft";
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 0.5fr 2fr 4fr 1fr;
+        height: 100vh;
+        width: 100wh;
+        grid-gap: 5px;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    header{
+        grid-area: he;
+        background: grey;
+        border-radius: 10px;
+
+        display: grid;
+        grid-template-areas: 
+        "na";
+    }
+
+    nav{
+        grid-area: na;
+        background: grey;
+        border-radius: 10px;
+    }
+
+    section{
+        grid-area: se;
+        
+        display: grid;
+        grid-template-areas: 
+        "ar1 ar2";
+        grid-gap: 5px;
+    }
+
+    main{
+        grid-area: ma;
+        background: grey;
+        border-radius: 10px;
+    }
+
+    footer{
+        grid-area: ft;
+        background: grey;
+        border-radius: 10px;
+    }
+
+    .article1{
+        grid-area: ar1;
+        background: red;
+        border-radius: 10px;
+
+    }
+
+    .article2{
+        grid-area: ar2;
+        background: red;
+        border-radius: 10px;
+    }
+
+    body,ul{
+        margin: 0;
+    }
+
+    .menu{
+        height: 50vh;
+        width: 50vw;
+        background: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 0px -10px rgba(0, 0, 0, 0.75);
+        z-index: 10;
+        border-radius: 0px 10px 10px 10px;
+    }
+
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+    }
+
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+
+    .show{
+        left: 0vw;
+    }
+
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(50,50,50,0.5);
+        display: none;
+        z-index: 5;
+    }
+
+
+    .visible{
+        display: block;
+    }
+
 }
 
-header{
-    grid-area: he;
-    background: grey;
-    border-radius: 10px;
-}
 
-nav{
-    grid-area: na;
-    background: grey;
-    border-radius: 10px;
-}
 
-section{
-    grid-area: se;
-    
-    display: grid;
-    grid-template-areas: 
-    "ar1 ar2";
-    grid-gap: 5px;
-}
-
-main{
-    grid-area: ma;
-    background: grey;
-    border-radius: 10px;
-}
-
-footer{
-    grid-area: ft;
-    background: grey;
-    border-radius: 10px;
-}
-
-.article1{
-    grid-area: ar1;
-    background: red;
-    border-radius: 10px;
-
-}
-
-.article2{
-    grid-area: ar2;
-    background: red;
-    border-radius: 10px;
-}
-
-}
 
 @media screen and (min-width: 769px){
     .wrapper{
         display: grid;
         grid-template-areas: 
-        "na he he"
+        "he he he"
         "ma ma se"
         "ma ma se"
         "ft ft ft";
@@ -75,11 +133,20 @@ footer{
         width: 100wh;
         grid-gap: 5px;
     }
+
+    body{
+        margin: 0;
+    }
     
+
     header{
         grid-area: he;
         background: grey;
         border-radius: 10px;
+    
+        display: grid;
+        grid-template-areas: 
+        "na";
     }
     
     nav{
@@ -93,7 +160,8 @@ footer{
         
         display: grid;
         grid-template-areas: 
-        "ar1 ar2";
+        "ar1"
+        "ar2";
         grid-gap: 5px;
     }
     
@@ -120,6 +188,53 @@ footer{
         grid-area: ar2;
         background: red;
         border-radius: 10px;
+    }
+
+    body,ul{
+        margin: 0;
+    }
+    
+    .menu{
+        height: 100vh;
+        width: 35vw;
+        background: rgb(175, 34, 34);
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 0px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+    }
+    
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+    
+    .show{
+        left: 0vw;
+    }
+    
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(50,50,50,0.5);
+        display: none;
+        z-index: 5;
+    }
+    
+    
+    .visible{
+        display: block;
     }
     
 }
