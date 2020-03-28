@@ -3,35 +3,45 @@
         .wrapper{
         display: grid;
         grid-template-areas: 
-        "he he"
+        "she she"
         "se se"
         "ma ma"
         "ft ft";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
         height: 100vh;
-        width: 100wh;
+        width: 100vw;
         grid-gap: 5px;
+        background: rgb(99, 99, 102);
     }
 
     body{
         margin: 0;
     }
 
-    .header{
-        grid-area: he;
-        background: grey;
-        border-radius: 10px;
+    .sectionheader{
+        grid-area: she;
+        background: rgb(199, 199, 204);
 
         display: grid;
         grid-template-areas: 
-        "na";
+        "na he";
+        grid-template-columns: 0.7fr 5fr;
+    }
+
+    .header{
+        grid-area: he;
+        background: rgb(199, 199, 204);
+        text-align: center;
+        padding-right: 70px;
     }
 
     .nav{
         grid-area: na;
-        background: grey;
+        background: rgb(199, 199, 204);
         border-radius: 10px;
+        padding-top: 13px;
+        text-align: center;
     }
 
     section{
@@ -41,31 +51,34 @@
         grid-template-areas: 
         "ar1 ar2";
         grid-gap: 5px;
+        background-color: rgb(199, 199, 204);
     }
 
     main{
         grid-area: ma;
-        background: grey;
-        border-radius: 10px;
+        background-position: center;
+        background-image: url("../img/openbook.png");
+        background-color: rgb(199, 199, 204);
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 
-    footer{
+    .footer{
         grid-area: ft;
-        background: grey;
-        border-radius: 10px;
+        background: rgb(199, 199, 204);
+        text-align: center;
     }
 
     .article1{
         grid-area: ar1;
-        background: red;
-        border-radius: 10px;
-
+        padding: 10px;
+        text-align: center;
     }
 
     .article2{
         grid-area: ar2;
-        background: red;
-        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
     }
 
     body,ul{
@@ -73,16 +86,16 @@
     }
 
     .menu{
-        height: 50vh;
+        height: 20vh;
         width: 50vw;
-        background: rgb(255, 255, 255);
+        background: grey;
         position: fixed;
         top: 0;
         left: -100vw;
         transition: left 0.3s;
         box-shadow: 10px 0px 0px -10px rgba(0, 0, 0, 0.75);
         z-index: 10;
-        border-radius: 0px 10px 10px 10px;
+        border-radius: 0px 0px 10px 10px;
     }
 
     .menu-button{
@@ -114,13 +127,43 @@
         display: block;
     }
 
+    .menulist{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 50vw;
+        background-color: #f1f1f1;
+        border-radius: 0px 0px 10px 0px;
+    }
+      
+    .menulinks a{
+        display: block;
+        color: rgb(0, 0, 0);
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+      
+    .menulinks a:hover {
+        background-color: #555;
+        color: white;
+    }
+
+    .mainpagelinks a{
+        display: block;
+        text-decoration: none;
+        color: blue;
+    }
+
+    .mainpagelinks a:hover{
+        color: red;
+    }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 768px){
     .wrapper{
         display: grid;
         grid-template-areas: 
-        "he he he"
+        "she she she"
         "ma ma se"
         "ma ma se"
         "ft ft ft";
@@ -134,24 +177,34 @@
     body{
         margin: 0;
     }
-    
 
-    .header{
+    .sectionheader{
+        grid-area: she;
+        border-radius: 10px;
+        background: grey;
+
+        display: grid;
+        grid-template-areas: 
+        "na he";
+        grid-template-columns: 0.7fr 5fr;
+    }
+
+    header{
         grid-area: he;
         background: grey;
         border-radius: 10px;
-    
-        display: grid;
-        grid-template-areas: 
-        "na";
+        text-align: center;
+        padding-right: 70px;
     }
-    
+
     .nav{
         grid-area: na;
         background: grey;
         border-radius: 10px;
+        padding-top: 13px;
+        text-align: center;
     }
-    
+
     section{
         grid-area: se;
         
@@ -168,56 +221,55 @@
         border-radius: 10px;
     }
     
-    footer{
+    .footer{
         grid-area: ft;
-        background: grey;
-        border-radius: 10px;
+        background: rgb(199, 199, 204);
     }
     
     .article1{
         grid-area: ar1;
-        background: red;
+        background: repeating-linear-gradient(grey, cyan);
         border-radius: 10px;
-    
+        padding: 10px;
     }
     
     .article2{
         grid-area: ar2;
-        background: red;
+        background: repeating-linear-gradient(grey, cyan);
         border-radius: 10px;
+        padding: 10px;
     }
 
     body,ul{
         margin: 0;
     }
-    
+
     .menu{
-        height: 100vh;
-        width: 35vw;
-        background: rgb(175, 34, 34);
+        height: 20vh;
+        width: 50vw;
+        background: grey;
         position: fixed;
         top: 0;
         left: -100vw;
         transition: left 0.3s;
-        box-shadow: 10px 0px 0px -10px rgba(0,0,0,0.75);
+        box-shadow: 10px 0px 0px -10px rgba(0, 0, 0, 0.75);
         z-index: 10;
         border-radius: 0px 0px 10px 10px;
     }
 
-    
     .menu-button{
         cursor: pointer;
         display: inline;
     }
-    
+
     .menu-button i.material-icons{
         font-size: 2.5rem;
     }
-    
+
     .show{
         left: 0vw;
     }
-    
+
     .fade-layer{
         position: fixed;
         top: 0;
@@ -228,12 +280,32 @@
         display: none;
         z-index: 5;
     }
-    
-    
+
+
     .visible{
         display: block;
     }
-    
+
+    .menulist{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 50vw;
+        background-color: #f1f1f1;
+        border-radius: 0px 0px 10px 0px;
+    }
+      
+    .menulinks a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+      
+    .menulinks a:hover {
+        background-color: #555;
+        color: white;
+    }
 }
 
 
@@ -250,7 +322,7 @@
     .catalog_wrapper{
       display: grid;
       grid-template-areas:
-      "he he"
+      "she she"
       "ma ma"
       "ma ma"
       "ft ft";
@@ -258,85 +330,37 @@
       grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
       height: 100vh;
       width: 100wh;
-      grid-gap: 5px;  
+      grid-gap: 5px; 
+      background: rgb(99, 99, 102);
     }
 
     body{
         margin: 0;
     }
 
-    .header{
-        grid-area: he;
-        background: grey;
-        border-radius: 10px;
-
-        display: grid;
-        grid-template-areas: 
-        "na";
-    }
-
-    .nav{
-        grid-area: na;
-        background: grey;
-        border-radius: 10px;
-    }
-
     .catalog_main{
         grid-area: ma;
-        background: darkcyan;
-        border-radius: 10px;
     }
 
-    footer{
-        grid-area: ft;
-        background: grey;
-        border-radius: 10px;
-    }
-
-    body,ul{
+    .catalogulist{
+        list-style-type: none;
         margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100%;
+        background: rgb(199, 199, 204);
     }
-
-    .menu{
-        height: 50vh;
-        width: 50vw;
-        background: rgb(255, 255, 255);
-        position: fixed;
-        top: 0;
-        left: -100vw;
-        transition: left 0.3s;
-        box-shadow: 10px 0px 0px -10px rgba(0, 0, 0, 0.75);
-        z-index: 10;
-        border-radius: 0px 10px 10px 10px;
-    }
-
-    .menu-button{
-        cursor: pointer;
-        display: inline;
-    }
-
-    .menu-button i.material-icons{
-        font-size: 2.5rem;
-    }
-
-    .show{
-        left: 0vw;
-    }
-
-    .fade-layer{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(50,50,50,0.5);
-        display: none;
-        z-index: 5;
-    }
-
-
-    .visible{
+      
+    .cataloglist a{
         display: block;
+        color: #000;
+        padding: 35px 16px;
+        text-decoration: none;
+    }
+      
+    .cataloglist a:hover {
+        background-color: #555;
+        color: white;
     }
 }
 
@@ -344,7 +368,7 @@
     .catalog_wrapper{
         display: grid;
         grid-template-areas:
-        "he he"
+        "she she"
         "ma ma"
         "ma ma"
         "ft ft";
@@ -359,81 +383,11 @@
         margin: 0;
     }
 
-    .header{
-        grid-area: he;
-        background: grey;
-        border-radius: 10px;
-
-        display: grid;
-        grid-template-areas: 
-        "na";
-    }
-
-    .nav{
-        grid-area: na;
-        background: grey;
-        border-radius: 10px;
-    }
-
     .catalog_main{
         grid-area: ma;
         background: darkcyan;
         border-radius: 10px;
     }
-
-    footer{
-        grid-area: ft;
-        background: grey;
-        border-radius: 10px;
-    }
-
-    body,ul{
-        margin: 0;
-    }
-
-    .menu{
-        height: 100vh;
-        width: 35vw;
-        background: rgb(175, 34, 34);
-        position: fixed;
-        top: 0;
-        left: -100vw;
-        transition: left 0.3s;
-        box-shadow: 10px 0px 0px -10px rgba(0,0,0,0.75);
-        z-index: 10;
-        border-radius: 0px 0px 10px 10px;
-    }
-
-    .menu-button{
-        cursor: pointer;
-        display: inline;
-    }
-
-    .menu-button i.material-icons{
-        font-size: 2.5rem;
-    }
-
-    .show{
-        left: 0vw;
-    }
-
-    .fade-layer{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(50,50,50,0.5);
-        display: none;
-        z-index: 5;
-    }
-
-
-    .visible{
-        display: block;
-    }
-
-
 }
 
 
@@ -445,3 +399,105 @@
 
 
 /*articles/reveiws av böckerna*/
+@media screen and (max-width: 768px){
+    .article_wrapper{
+      display: grid;
+      grid-template-areas:
+      "she she"
+      "se1 se1"
+      "se1 se1"
+      "ft ft";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.5fr 3fr 3fr 0.5fr;
+      height: 100vh;
+      width: 100wh;
+      grid-gap: 5px;  
+    }
+
+    .se1{
+        grid-area: se1;
+        background:  rgb(199, 199, 204);
+    }
+}
+
+@media screen and (min-width: 769px){
+    .article_wrapper{
+        display: grid;
+        grid-template-areas:
+        "she she"
+        "se1 se1"
+        "se1 se1"
+        "ft ft";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 3fr 3fr 0.5fr;
+        height: 100vh;
+        width: 100wh;
+        grid-gap: 5px;  
+    }
+
+    body{
+        margin: 0;
+    }
+
+    .se1{
+        grid-area: se1;
+        background: grey;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*Informations sida*/
+@media screen and (max-width: 768px){
+    .info_wrapper{
+      display: grid;
+      grid-template-areas:
+      "she she"
+      "ma ma";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.4fr 6fr;
+      height: 100vh;
+      width: 100wh;
+      grid-gap: 5px;  
+    }
+
+    body{
+        margin: 0;
+    }
+
+    .info_main{
+        grid-area: ma;
+        background: rgb(199, 199, 204);
+    }
+}
+
+@media screen and (min-width: 769px){
+    .info_wrapper{
+        display: grid;
+        grid-template-areas:
+        "she she"
+        "ma ma";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.4fr 6fr;
+        height: 100vh;
+        width: 100wh;
+        grid-gap: 5px;  
+    }
+
+    body{
+        margin: 0;
+    }
+
+    .info_main{
+        grid-area: ma;
+        background: darkcyan;
+        border-radius: 10px;
+    }
+}
