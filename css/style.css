@@ -1,5 +1,5 @@
 /*Index/Homepage*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 942px){
         .wrapper{
         display: grid;
         grid-template-areas: 
@@ -11,8 +11,11 @@
         grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
         height: 100vh;
         width: 100vw;
-        grid-gap: 5px;
-        background: rgb(99, 99, 102);
+    }
+
+    .headerlink{
+        color: black;
+        text-decoration: none;
     }
 
     body{
@@ -21,7 +24,7 @@
 
     .sectionheader{
         grid-area: she;
-        background: rgb(199, 199, 204);
+        background: #94A4D1;
 
         display: grid;
         grid-template-areas: 
@@ -31,15 +34,14 @@
 
     .header{
         grid-area: he;
-        background: rgb(199, 199, 204);
+        background: #94A4D1;
         text-align: center;
         padding-right: 70px;
     }
 
     .nav{
         grid-area: na;
-        background: rgb(199, 199, 204);
-        border-radius: 10px;
+        background: #94A4D1;
         padding-top: 13px;
         text-align: center;
     }
@@ -51,22 +53,21 @@
         grid-template-areas: 
         "ar1 ar2";
         grid-gap: 5px;
-        background-color: rgb(199, 199, 204);
+        background-color: #567395;
     }
 
     main{
         grid-area: ma;
-        background-position: center;
-        background-image: url("../img/openbook.png");
-        background-color: rgb(199, 199, 204);
-        background-size: 100%;
-        background-repeat: no-repeat;
+        background: #708CAD;
+        padding-left: 10px;
+        overflow: scroll;
     }
 
     .footer{
         grid-area: ft;
-        background: rgb(199, 199, 204);
+        background: #0D1218;
         text-align: center;
+        color: #567395;
     }
 
     .article1{
@@ -132,7 +133,7 @@
         margin: 0;
         padding: 0;
         width: 50vw;
-        background-color: #f1f1f1;
+        background-color: #94A4D1;
         border-radius: 0px 0px 10px 0px;
     }
       
@@ -144,22 +145,20 @@
     }
       
     .menulinks a:hover {
-        background-color: #555;
+        background-color: #1C2631;
         color: white;
     }
 
     .mainpagelinks a{
-        display: block;
-        text-decoration: none;
-        color: blue;
+        color: black;
     }
 
     .mainpagelinks a:hover{
-        color: red;
+        color: blue;
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 943px){
     .wrapper{
         display: grid;
         grid-template-areas: 
@@ -168,20 +167,24 @@
         "ma ma se"
         "ft ft ft";
         grid-template-columns: 1fr 4fr 4fr;
-        grid-template-rows: 0.5fr 2fr 4fr 1fr;
+        grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
         height: 100vh;
-        width: 100wh;
-        grid-gap: 5px;
+        width: 100vw;
     }
 
     body{
         margin: 0;
     }
 
+    .headerlink{
+        color: black;
+        text-decoration: none;
+    }
+
     .sectionheader{
         grid-area: she;
         border-radius: 10px;
-        background: grey;
+        background: #94A4D1;
 
         display: grid;
         grid-template-areas: 
@@ -189,19 +192,18 @@
         grid-template-columns: 0.7fr 5fr;
     }
 
-    header{
+    .header{
         grid-area: he;
-        background: grey;
-        border-radius: 10px;
+        background: #94A4D1;
         text-align: center;
-        padding-right: 70px;
+        padding-right: 200px;
     }
 
     .nav{
         grid-area: na;
-        background: grey;
-        border-radius: 10px;
+        background: #94A4D1;
         padding-top: 13px;
+        padding-right: 100px;
         text-align: center;
     }
 
@@ -213,31 +215,37 @@
         "ar1"
         "ar2";
         grid-gap: 5px;
+        background-color: #708CAD;
     }
     
     main{
         grid-area: ma;
-        background: grey;
-        border-radius: 10px;
+        background: #708CAD;
     }
     
     .footer{
         grid-area: ft;
-        background: rgb(199, 199, 204);
+        background: #0D1218;
+        color: #567395;
+        text-align: center;
     }
     
     .article1{
         grid-area: ar1;
-        background: repeating-linear-gradient(grey, cyan);
-        border-radius: 10px;
         padding: 10px;
+        text-align: center;
+        display: block;
+        border: 1px solid#304154;
+        background: #304154;
     }
     
     .article2{
         grid-area: ar2;
-        background: repeating-linear-gradient(grey, cyan);
-        border-radius: 10px;
         padding: 10px;
+        text-align: center;
+        display: block;
+        border: 1px solid #304154;
+        background: #304154;
     }
 
     body,ul{
@@ -305,6 +313,14 @@
     .menulinks a:hover {
         background-color: #555;
         color: white;
+    }
+
+    .mainpagelinks a{
+        color: black;
+    }
+
+    .mainpagelinks a:hover{
+        color: blue;
     }
 }
 
@@ -318,7 +334,7 @@
 
 
 /*catalog/Bok katalog*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 942px){
     .catalog_wrapper{
       display: grid;
       grid-template-areas:
@@ -329,42 +345,39 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
       height: 100vh;
-      width: 100wh;
-      grid-gap: 5px; 
-      background: rgb(99, 99, 102);
-    }
-
-    body{
-        margin: 0;
+      width: 100vw;
     }
 
     .catalog_main{
         grid-area: ma;
+        background: #708CAD;
+        padding-left: 0;
     }
 
     .catalogulist{
         list-style-type: none;
         margin: 0;
         padding: 0;
-        width: 100vw;
+        width: 100%;
         height: 100%;
-        background: rgb(199, 199, 204);
+        background: #708CAD;
     }
       
     .cataloglist a{
         display: block;
         color: #000;
-        padding: 35px 16px;
+        padding: 34.2px 16px;
         text-decoration: none;
+        border: 1px solid #304154;
     }
       
     .cataloglist a:hover {
-        background-color: #555;
-        color: white;
+        background-color: #1C2631;
+        color: #567395;
     }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 943px){
     .catalog_wrapper{
         display: grid;
         grid-template-areas:
@@ -375,8 +388,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
         height: 100vh;
-        width: 100wh;
-        grid-gap: 5px;  
+        width: 100vw; 
     }
 
     body{
@@ -385,8 +397,30 @@
 
     .catalog_main{
         grid-area: ma;
-        background: darkcyan;
-        border-radius: 10px;
+        background: #708CAD;
+        overflow: hidden;
+    }
+
+    .catalogulist{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100%;
+        background: #708CAD;
+    }
+      
+    .cataloglist a{
+        display: block;
+        color: #000;
+        padding: 43px 16px;
+        text-decoration: none;
+        border: 1px solid #304154;
+    }
+      
+    .cataloglist a:hover {
+        background-color: #1C2631;;
+        color: #567395;
     }
 }
 
@@ -399,50 +433,52 @@
 
 
 /*articles/reveiws av böckerna*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 942px){
     .article_wrapper{
       display: grid;
       grid-template-areas:
-      "she she"
-      "se1 se1"
-      "se1 se1"
-      "ft ft";
-      grid-template-columns: 1fr 1fr;
+      "she"
+      "ar1"
+      "ar1"
+      "ft";
       grid-template-rows: 0.5fr 3fr 3fr 0.5fr;
       height: 100vh;
-      width: 100wh;
-      grid-gap: 5px;  
-    }
-
-    .se1{
-        grid-area: se1;
-        background:  rgb(199, 199, 204);
-    }
-}
-
-@media screen and (min-width: 769px){
-    .article_wrapper{
-        display: grid;
-        grid-template-areas:
-        "she she"
-        "se1 se1"
-        "se1 se1"
-        "ft ft";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.5fr 3fr 3fr 0.5fr;
-        height: 100vh;
-        width: 100wh;
-        grid-gap: 5px;  
+      width: 100vw; 
     }
 
     body{
         margin: 0;
     }
 
-    .se1{
-        grid-area: se1;
-        background: grey;
-        border-radius: 10px;
+    .ar1{
+        grid-area: ar1;
+        background: #567395;
+        padding: 10px;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 943px){
+    .article_wrapper{
+        display: grid;
+        grid-template-areas:
+        "she"
+        "ar1"
+        "ar1"
+        "ft";
+        grid-template-rows: 0.5fr 3fr 3fr 0.5fr;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    .ar1{
+        grid-area: ar1;
+        background: #567395;
+        padding: 10px;
     }
 }
 
@@ -455,7 +491,7 @@
 
 
 /*Informations sida*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 942px){
     .info_wrapper{
       display: grid;
       grid-template-areas:
@@ -464,8 +500,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 0.4fr 6fr;
       height: 100vh;
-      width: 100wh;
-      grid-gap: 5px;  
+      width: 100vw; 
     }
 
     body{
@@ -474,11 +509,18 @@
 
     .info_main{
         grid-area: ma;
-        background: rgb(199, 199, 204);
+        background: #567395;
+        padding: 10px;
+        overflow: scroll;
+    }
+
+    .contactinfo{
+        text-align: center;
+        padding-top: 50px;
     }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 943px){
     .info_wrapper{
         display: grid;
         grid-template-areas:
@@ -487,8 +529,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.4fr 6fr;
         height: 100vh;
-        width: 100wh;
-        grid-gap: 5px;  
+        width: 100vw; 
     }
 
     body{
@@ -497,7 +538,12 @@
 
     .info_main{
         grid-area: ma;
-        background: darkcyan;
-        border-radius: 10px;
+        background: #567395;
+        padding: 10px;
+    }
+
+    .contactinfo{
+        text-align: center;
+        padding-top: 100px;
     }
 }
