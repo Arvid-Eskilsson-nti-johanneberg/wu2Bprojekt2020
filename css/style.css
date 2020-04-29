@@ -1,5 +1,6 @@
-/*Index/Homepage*/
+/* Mobile */
 @media screen and (max-width: 942px){
+    /*Index/Homepage Mobile*/
         .wrapper{
         display: grid;
         grid-template-areas: 
@@ -156,9 +157,100 @@
     .mainpagelinks a:hover{
         color: blue;
     }
+/* Catalog mobile */
+    .catalog_wrapper{
+        display: grid;
+        grid-template-areas:
+        "she she"
+        "ma ma"
+        "ma ma"
+        "ft ft";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
+        height: 100vh;
+        width: 100vw;
+    }
+    .catalog_main{
+        grid-area: ma;
+        background: #708CAD;
+        padding-left: 0;
+    }
+  
+    .catalogulist{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #708CAD;
+    }  
+    .cataloglist a{
+        display: block;
+        color: #000;
+        padding: 34.2px 16px;
+        text-decoration: none;
+        border: 1px solid #304154;
+    }
+        
+    .cataloglist a:hover {
+        background-color: #1C2631;
+        color: #567395;
+    }
+/* Article Mobile */
+    .article_wrapper{
+        display: grid;
+        grid-template-areas:
+        "she"
+        "ar1"
+        "ar1"
+        "ft";
+        grid-template-rows: 0.5fr 3fr 3fr 0.5fr;
+        height: 100vh;
+        width: 100vw; 
+    }
+  
+    body{
+        margin: 0;
+    }
+  
+    .ar1{
+        grid-area: ar1;
+        background: #567395;
+        padding: 10px;
+        overflow: scroll;
+    }
+/* Information Mobile */
+    .info_wrapper{
+        display: grid;
+        grid-template-areas:
+        "she she"
+        "ma ma";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.4fr 6fr;
+        height: 100vh;
+        width: 100vw; 
+    }
+  
+    body{
+        margin: 0;
+    }
+  
+    .info_main{
+        grid-area: ma;
+        background: #567395;
+        padding: 10px;
+        overflow: scroll;
+    }
+  
+    .contactinfo{
+        text-align: center;
+        padding-top: 50px;
+    }
 }
 
+/* Desktop */
 @media screen and (min-width: 943px){
+    /* Homepage/Index Desktop */
     .wrapper{
         display: grid;
         grid-template-areas: 
@@ -322,62 +414,7 @@
     .mainpagelinks a:hover{
         color: blue;
     }
-}
-
-
-
-
-
-
-
-
-
-
-/*catalog/Bok katalog*/
-@media screen and (max-width: 942px){
-    .catalog_wrapper{
-      display: grid;
-      grid-template-areas:
-      "she she"
-      "ma ma"
-      "ma ma"
-      "ft ft";
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
-      height: 100vh;
-      width: 100vw;
-    }
-
-    .catalog_main{
-        grid-area: ma;
-        background: #708CAD;
-        padding-left: 0;
-    }
-
-    .catalogulist{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        background: #708CAD;
-    }
-      
-    .cataloglist a{
-        display: block;
-        color: #000;
-        padding: 34.2px 16px;
-        text-decoration: none;
-        border: 1px solid #304154;
-    }
-      
-    .cataloglist a:hover {
-        background-color: #1C2631;
-        color: #567395;
-    }
-}
-
-@media screen and (min-width: 943px){
+/* Catalog Desktop */
     .catalog_wrapper{
         display: grid;
         grid-template-areas:
@@ -388,77 +425,37 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.5fr 2fr 4fr 0.5fr;
         height: 100vh;
-        width: 100vw; 
+        width: 100vw;
     }
-
-    body{
-        margin: 0;
-    }
-
+  
     .catalog_main{
         grid-area: ma;
         background: #708CAD;
-        overflow: hidden;
+        padding-left: 0;
     }
-
+  
     .catalogulist{
         list-style-type: none;
         margin: 0;
         padding: 0;
-        width: 100vw;
+        width: 100%;
         height: 100%;
         background: #708CAD;
     }
-      
+        
     .cataloglist a{
         display: block;
         color: #000;
-        padding: 43px 16px;
+        padding: 34.2px 16px;
         text-decoration: none;
         border: 1px solid #304154;
     }
-      
+        
     .cataloglist a:hover {
-        background-color: #1C2631;;
+        background-color: #1C2631;
         color: #567395;
     }
-}
-
-
-
-
-
-
-
-
-
-/*articles/reveiws av böckerna*/
-@media screen and (max-width: 942px){
-    .article_wrapper{
-      display: grid;
-      grid-template-areas:
-      "she"
-      "ar1"
-      "ar1"
-      "ft";
-      grid-template-rows: 0.5fr 3fr 3fr 0.5fr;
-      height: 100vh;
-      width: 100vw; 
-    }
-
-    body{
-        margin: 0;
-    }
-
-    .ar1{
-        grid-area: ar1;
-        background: #567395;
-        padding: 10px;
-        overflow: scroll;
-    }
-}
-
-@media screen and (min-width: 943px){
+/* Article desktop */
     .article_wrapper{
         display: grid;
         grid-template-areas:
@@ -480,47 +477,7 @@
         background: #567395;
         padding: 10px;
     }
-}
-
-
-
-
-
-
-
-
-
-/*Informations sida*/
-@media screen and (max-width: 942px){
-    .info_wrapper{
-      display: grid;
-      grid-template-areas:
-      "she she"
-      "ma ma";
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 0.4fr 6fr;
-      height: 100vh;
-      width: 100vw; 
-    }
-
-    body{
-        margin: 0;
-    }
-
-    .info_main{
-        grid-area: ma;
-        background: #567395;
-        padding: 10px;
-        overflow: scroll;
-    }
-
-    .contactinfo{
-        text-align: center;
-        padding-top: 50px;
-    }
-}
-
-@media screen and (min-width: 943px){
+/* Information Desktop */
     .info_wrapper{
         display: grid;
         grid-template-areas:
